@@ -28,7 +28,7 @@ const uploadToPinataAndCallContract = (address, filename) => {
     });
     let data = new FormData();
     data.append('pinataMetadata', metadata);
-    data.append('file', fs.createReadStream('./uploads/' + filename));
+    data.append('file', fs.createReadStream('./contracts/uploads/' + filename));
     postToPinata(data);
 };
 
